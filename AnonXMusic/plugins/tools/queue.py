@@ -156,7 +156,7 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     basic[videoid] = False
     buttons = queue_back_markup(_, what)
     med = InputMediaPhoto(
-        media="https://telegra.ph//file/6f7d35131f69951c74ee5.jpg",
+        media="https://graph.org/file/fb54c9bfb36ba977a4cf5.mp4",
         caption=_["queue_1"],
     )
     await CallbackQuery.edit_message_media(media=med)
@@ -165,11 +165,11 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     for x in got:
         j += 1
         if j == 1:
-            msg += f'Streaming :\n\n✨ Title : {x["title"]}\nDuration : {x["dur"]}\nBy : {x["by"]}\n\n'
+            msg += f'ꜱᴛʀᴇᴀᴍɪɴɢ :\n\n✨ ᴛɪᴛʟᴇ : {x["title"]}\nᴅᴜʀᴀᴛɪᴏɴ : {x["ᴅᴜʀ"]}\nʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ : {x["ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ"]}\n\n'
         elif j == 2:
-            msg += f'Queued :\n\n✨ Title : {x["title"]}\nDuration : {x["dur"]}\nBy : {x["by"]}\n\n'
+            msg += f'Qᴜᴇᴜᴇᴅ :\n\n✨ ᴛɪᴛʟᴇ : {x["title"]}\nᴅᴜʀᴀᴛɪᴏɴ : {x["ᴅᴜʀ"]}\nʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ : {x["ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ"]}\n\n'
         else:
-            msg += f'✨ Title : {x["title"]}\nDuration : {x["dur"]}\nBy : {x["by"]}\n\n'
+            msg += f'✨ ᴛɪᴛʟᴇ : {x["ᴛɪᴛʟᴇ"]}\nᴅᴜʀᴀᴛɪᴏɴ : {x["dur"]}\nʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ : {x["ʀᴇQᴜᴇꜱᴛᴇᴅ ʙʏ"]}\n\n'
     if "Queued" in msg:
         if len(msg) < 700:
             await asyncio.sleep(1)
